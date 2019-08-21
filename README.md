@@ -5,10 +5,10 @@ Basic javascript environment
 # usage
 
  <code>
- git clone https://github.com/alxford45/basic.git <br>
- cd basic <br>
- npm i <br>
- npm start <br>
+ git clone https://github.com/alxford45/basic.git <br/>
+ cd basic <br/>
+ npm i <br/>
+ npm start <br/>
  </code>
 
 # dependencies
