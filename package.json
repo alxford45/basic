@@ -1,0 +1,19 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "Basic javascript environment",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alxford45/basic.git"
+  },
+  "author": "Alex, Wingate",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alxford45/basic/issues"
+  },
+  "homepage": "https://github.com/alxford45/basic#readme"
+}
