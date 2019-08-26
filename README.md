@@ -24,3 +24,7 @@ webpack is a build tool for bundeling javascript modules
 ### webpack-dev-server
 
 webpack-cli plugin to serve web content locally
+
+### html-webpack-plugin
+
+webpack plugin to template html files
