@@ -22,7 +22,8 @@ module.exports = {
     /**
      * assigns index.js and all its imports to the alias 'main'
      */
-    main: path.join(__dirname, "src/index.js")
+    main: path.join(__dirname, "src/index.js"),
+    quote: path.join(__dirname, "src/js/quote.js")
   },
   /**
    * output specifies the resolution of entry
@@ -63,6 +64,29 @@ module.exports = {
      */
     watchContentBase: true
   },
+  module: {
+    rules: [
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: "html-loader",
+          options: {
+            interpolate: true
+          }
+        }
+      },
+      {
+        test: /\.css$/i,
+        use: [{ loader: "style-loader" }, { loader: "css-loader" }]
+      }
+    ]
+  },
+  resolve: {
+    alias: {
+      components: path.resolve("src", "components"),
+      views: path.resolve("src", "views")
+    }
+  },
   plugins: [
     /**
      * plugin to template html files and dynamically parse them like js files
@@ -79,7 +103,17 @@ module.exports = {
       /**
        * the location of the html template to create the new html file.
        */
-      template: path.join(__dirname, "src/index.html")
+      template: path.join(__dirname, "src/index.html"),
+      /**
+       * the alias(es) of the javascript script to attatch to the html template
+       * default is "all".
+       */
+      chunks: ["main"]
+    }),
+    new HtmlWebpackPlugin({
+      filename: "quote.html",
+      template: path.join(__dirname, "src/views/quote.html"),
+      chunks: ["quote"]
     })
   ]
 };
